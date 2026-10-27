@@ -4,7 +4,7 @@
 
 *Most companies don't need more software. They need operations they can actually see.*
 
-🌐 [Portfolio](https://adamkristof.hu) · 🦁 [Lioner](https://lioner.hu) · ✍️ [Blog](https://lioner.hu/blog/szerzo/adam-kristof) · 💼 [LinkedIn](https://www.linkedin.com/in/adamkristof/) · 🔍 [Free business audit](https://lioner.hu/audit)
+🌐 [Portfolio](https://adamkristof.hu) · 🦁 [Lioner](https://lioner.hu) · ✍️ [Blog](https://lioner.hu/blog/szerzo/adam-kristof) · 💼 [LinkedIn](https://www.linkedin.com/in/adamkristof/)
 
 I built my first website at 13. Today I design and build business systems (ERP, CRM, internal tools) and web applications in Laravel, mostly for companies that have outgrown spreadsheets. 130+ projects shipped with Lioner so far.
 
