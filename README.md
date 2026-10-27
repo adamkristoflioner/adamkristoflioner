@@ -1,8 +1,11 @@
 ### Hi, I'm Kristóf 👋
 
-Full-stack developer from Kecskemét, Hungary, and co-founder of [Lioner](https://lioner.hu). I built my first website at 13. Today I design and build business systems (ERP, CRM, internal tools) and web applications in Laravel, mostly for companies that have outgrown spreadsheets. 130+ projects shipped with Lioner so far.
+**Full-stack developer · co-founder @ [Lioner](https://lioner.hu) · Kecskemét, Hungary**
+*Most companies don't need more software. They need operations they can actually see.*
 
-🌐 Portfolio: [adamkristof.hu](https://adamkristof.hu)
+🌐 [Portfolio](https://adamkristof.hu) · 🦁 [Lioner](https://lioner.hu) · ✍️ [Blog](https://lioner.hu/blog/szerzo/adam-kristof) · 💼 [LinkedIn](https://www.linkedin.com/in/adamkristof/) · 🔍 [Free business audit](https://lioner.hu/audit)
+
+I built my first website at 13. Today I design and build business systems (ERP, CRM, internal tools) and web applications in Laravel, mostly for companies that have outgrown spreadsheets. 130+ projects shipped with Lioner so far.
 
 **What I'm building now**
 
@@ -18,6 +21,7 @@ Full-stack developer from Kecskemét, Hungary, and co-founder of [Lioner](https:
 | [VidékiOtthon](https://lioner.hu/referencia/videkiotthon-ingatlan-hirdetesi-portal-fejlesztes) | Real estate portal grown out of a large Facebook group: filters, per-listing stats, automatic Facebook posting | Laravel | 1,100+ active listings and 400+ users in the first two months |
 | [JustConnect](https://lioner.hu/referencia/justconnect) | Event platform for 100-person social evenings: tickets, QR check-in, live seating rounds, mutual-interest matching, two languages | Laravel | 9 organiser exports, own CMS |
 | [TanárTér](https://lioner.hu/referencia/tanarter) | Private tutor marketplace from zero: search, paid promotion, SimplePay payments, automatic Billingo invoicing, SEO landing pages | Laravel 12, Vue 3 | Idea to paying marketplace |
+| [Mohamanó Foundation](https://lioner.hu/referencia/mohamano-alapitvany) | Pro bono website for a children's charity: one-off and monthly donations with SimplePay, 1% tax and REpont pages, content the foundation edits itself | Laravel | Built for free, live in 2 weeks |
 | TrustPhone | Started as a webshop, grew into the company's internal system: inventory, sales and repair workflow | Laravel | 5 years of continuous development, still going |
 | [Borízlésem](https://borizlesem.hu) | Our own wine community platform that learns each user's taste and recommends wines | Laravel | Own product |
 | [CityFox](https://cityfox.hu) | City adventure game, started as CityRoom: turning cities into escape rooms | Web app | [1st place, MVM Edison 2022](https://www.baon.hu/pr/2022/06/szabaduloszobava-alakulo-varosok-a-cityroom-vegzett-az-elso-helyen) |
@@ -42,6 +46,23 @@ More case studies: [lioner.hu/referenciak](https://lioner.hu/referenciak)
 
 Also: Socket.io, Bootstrap, Nginx, DigitalOcean, CI/CD, and integrations like SimplePay, Billingo and GLS.
 
+**Writing** (in Hungarian, on the Lioner blog)
+
+- [Most companies aren't short of people, they're short of systems](https://lioner.hu/blog/a-legtobb-ceg-nem-emberhiannyal-kuzd-hanem-rendszerhiannyal)
+- [What does running on manual work really cost?](https://lioner.hu/blog/mennyibe-kerul-valojaban-a-manualis-mukodes)
+- [How a company system is built from scratch](https://lioner.hu/blog/hogyan-epul-fel-egy-vallalati-rendszer-a-nullarol)
+- [When custom development is not worth it](https://lioner.hu/blog/mikor-nem-eri-meg-egyedi-fejlesztest-valasztani)
+- [A client saved 3 hours a day with a custom system](https://lioner.hu/blog/egy-ugyfelunk-napi-3-orat-sporolt-egyedi-rendszerrel)
+
+[All 39 articles →](https://lioner.hu/blog/szerzo/adam-kristof)
+
+**Activity**
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=adamkristoflioner&theme=dark&hide_border=true&background=0D1117">
+  <img alt="GitHub streak stats" src="https://streak-stats.demolab.com?user=adamkristoflioner&hide_border=true">
+</picture>
+
 **How I got here**
 
 ```console
@@ -65,3 +86,7 @@ Most of my work lives in private client repositories, which is why the contribut
 **Find me**
 
 [adamkristof.hu](https://adamkristof.hu) · [lioner.hu](https://lioner.hu) · [LinkedIn](https://www.linkedin.com/in/adamkristof/) · adam.kristof@lioner.hu
+
+---
+
+*"Inkább egy határozott nem, mintsem egy bizonytalan igen."* – a firm no beats an uncertain yes. My reply to a client in 2021, and still how we pick projects.
