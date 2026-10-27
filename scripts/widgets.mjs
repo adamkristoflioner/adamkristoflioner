@@ -1,4 +1,4 @@
-// Saját profil-widgetek: terminál-kártya az aktivitásról + a README blog-listájának frissítése.
+// Saját profil-widgetek: terminál-kártya, hozzájárulási naptár (az adamkristof.hu-nak) és a README blog-listája.
 // Futtatás: GITHUB_TOKEN=... GH_USER=adamkristoflioner node scripts/widgets.mjs
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
@@ -15,10 +15,16 @@ async function fetchCalendar() {
     const year = new Date().getUTCFullYear();
     const query = `query($login: String!, $from: DateTime!, $to: DateTime!) {
         user(login: $login) {
-            contributionsCollection(from: $from, to: $to) {
+            year: contributionsCollection(from: $from, to: $to) {
                 contributionCalendar {
                     totalContributions
                     weeks { contributionDays { date contributionCount weekday } }
+                }
+            }
+            last: contributionsCollection {
+                contributionCalendar {
+                    totalContributions
+                    weeks { contributionDays { date contributionCount weekday contributionLevel } }
                 }
             }
         }
@@ -30,8 +36,12 @@ async function fetchCalendar() {
     });
     const json = await res.json();
     if (json.errors) throw new Error(JSON.stringify(json.errors));
-    const cal = json.data.user.contributionsCollection.contributionCalendar;
-    return { year, total: cal.totalContributions, days: cal.weeks.flatMap(w => w.contributionDays) };
+    const cal = json.data.user.year.contributionCalendar;
+    const last = json.data.user.last.contributionCalendar;
+    return {
+        year, total: cal.totalContributions, days: cal.weeks.flatMap(w => w.contributionDays),
+        lastYear: { total: last.totalContributions, weeks: last.weeks },
+    };
 }
 
 function stats({ year, total, days }) {
@@ -133,6 +143,47 @@ ${post}
 `;
 }
 
+
+// Az elmúlt egy év naptára az adamkristof.hu színeivel (papír háttér, téglavörös fokozatok).
+const MONTHS = ['jan', 'febr', 'márc', 'ápr', 'máj', 'jún', 'júl', 'aug', 'szept', 'okt', 'nov', 'dec'];
+const LEVEL_FILL = {
+    NONE: '#e4e0d8', FIRST_QUARTILE: '#ecc3b6', SECOND_QUARTILE: '#dc917b',
+    THIRD_QUARTILE: '#c9634a', FOURTH_QUARTILE: '#b8432b',
+};
+
+function calendarSvg({ total, weeks }) {
+    const cell = 11, step = 14, left = 34, top = 40;
+    const W = left + weeks.length * step + 4, H = top + 7 * step + 34;
+    const font = "font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace'";
+    const cells = [], months = [];
+    let lastMonth = -1;
+    weeks.forEach((w, x) => {
+        const first = w.contributionDays[0];
+        const m = Number(first.date.slice(5, 7)) - 1;
+        if (m !== lastMonth && Number(first.date.slice(8, 10)) <= 7) {
+            if (x < weeks.length - 2) months.push(`<text x='${left + x * step}' y='${top - 10}' ${font} font-size='11' fill='#6f6a62'>${MONTHS[m]}</text>`);
+            lastMonth = m;
+        }
+        for (const d of w.contributionDays) {
+            cells.push(`<rect x='${left + x * step}' y='${top + d.weekday * step}' width='${cell}' height='${cell}' rx='2' fill='${LEVEL_FILL[d.contributionLevel] || LEVEL_FILL.NONE}'><title>${d.date}: ${d.contributionCount}</title></rect>`);
+        }
+    });
+    const dayLabels = [[1, 'H'], [3, 'Sze'], [5, 'P']]
+        .map(([wd, t]) => `<text x='0' y='${top + wd * step + 9}' ${font} font-size='10' fill='#6f6a62'>${t}</text>`).join('');
+    const legendX = W - 4 - 5 * step - 62;
+    const legend = `<text x='${legendX - 8}' y='${H - 8}' ${font} font-size='10' fill='#6f6a62' text-anchor='end'>kevesebb</text>`
+        + Object.values(LEVEL_FILL).map((f, i) => `<rect x='${legendX + i * step}' y='${H - 17}' width='${cell}' height='${cell}' rx='2' fill='${f}'/>`).join('')
+        + `<text x='${legendX + 5 * step + 4}' y='${H - 8}' ${font} font-size='10' fill='#6f6a62'>több</text>`;
+    return `<svg xmlns='http://www.w3.org/2000/svg' width='${W}' height='${H}' viewBox='0 0 ${W} ${H}' role='img' aria-label='Ádám Kristóf GitHub-hozzájárulásai az elmúlt egy évben: ${num(total)}'>
+<text x='0' y='14' ${font} font-size='13' fill='#121212' font-weight='600'>${num(total)} hozzájárulás az elmúlt egy évben</text>
+${months.join('')}
+${dayLabels}
+${cells.join('')}
+${legend}
+</svg>
+`;
+}
+
 async function updateReadme(posts) {
     const readme = await readFile(README, 'utf8');
     const list = posts.slice(0, 5).map(p => `- [${p.title}](${p.url})${p.date ? ` · ${p.date}` : ''}`).join('\n');
@@ -144,5 +195,6 @@ const [calendar, posts] = await Promise.all([fetchCalendar(), fetchPosts().catch
 const st = stats(calendar);
 await mkdir(OUT_DIR, { recursive: true });
 await writeFile(`${OUT_DIR}/kristof-terminal.svg`, terminalSvg(st, posts[0]));
+await writeFile(`${OUT_DIR}/kristof-calendar.svg`, calendarSvg(calendar.lastYear));
 if (posts.length) await updateReadme(posts);
-console.log(JSON.stringify({ ...st, posts: posts.length }));
+console.log(JSON.stringify({ ...st, lastYear: calendar.lastYear.total, posts: posts.length }));
