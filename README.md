@@ -52,11 +52,11 @@ Emellett: Socket.io, Bootstrap, Nginx, DigitalOcean, CI/CD, és integrációk, p
 **Írásaim** (a Lioner blogján)
 
 <!-- BLOG:START -->
-- [A legtöbb cég nem emberhiánnyal küzd, hanem rendszerhiánnyal](https://lioner.hu/blog/a-legtobb-ceg-nem-emberhiannyal-kuzd-hanem-rendszerhiannyal)
-- [Mennyibe kerül valójában a manuális működés?](https://lioner.hu/blog/mennyibe-kerul-valojaban-a-manualis-mukodes)
-- [Hogyan épül fel egy vállalati rendszer a nulláról?](https://lioner.hu/blog/hogyan-epul-fel-egy-vallalati-rendszer-a-nullarol)
-- [Mikor nem éri meg egyedi fejlesztést választani?](https://lioner.hu/blog/mikor-nem-eri-meg-egyedi-fejlesztest-valasztani)
-- [Egy ügyfelünk napi 3 órát spórolt egyedi rendszerrel](https://lioner.hu/blog/egy-ugyfelunk-napi-3-orat-sporolt-egyedi-rendszerrel)
+- [Díjmentesen építettük meg a Mohamanó Alapítvány új weboldalát](https://lioner.hu/blog/mohamano-alapitvany-uj-weboldal) · 2026. október 20.
+- [AI e-mail automatizálás: hogyan dolgozza fel az AI a beérkező leveleket?](https://lioner.hu/blog/ai-e-mail-automatizalas-hogyan-dolgozza-fel-az-ai-a-beerkezo-leveleket) · 2026. szeptember 11.
+- [Hogyan épül fel egy vállalati rendszer a nulláról?](https://lioner.hu/blog/hogyan-epul-fel-egy-vallalati-rendszer-a-nullarol) · 2026. szeptember 9.
+- [Egyedi időpontfoglaló rendszer: mikor éri meg a kész szoftver helyett?](https://lioner.hu/blog/egyedi-idopontfoglalo-rendszer) · 2026. szeptember 2.
+- [Mennyibe kerül valójában a manuális működés?](https://lioner.hu/blog/mennyibe-kerul-valojaban-a-manualis-mukodes) · 2026. május 14.
 <!-- BLOG:END -->
 
 [Mind a 39 cikkem →](https://lioner.hu/blog/szerzo/adam-kristof)
