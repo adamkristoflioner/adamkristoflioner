@@ -4,6 +4,8 @@
 
 *A legtöbb cégnek nem újabb szoftver hiányzik, hanem átlátható működés.*
 
+[![Gépelő animáció](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1400&color=FF6B5B&vCenter=true&width=560&height=32&lines=Laravel+%C2%B7+ERP+%C2%B7+CRM+%C2%B7+Vue;AI-%C3%BCgyn%C3%B6k%C3%B6k+%C3%A9les+haszn%C3%A1latban;Excel+helyett+rendszer;130%2B+%C3%A1tadott+projekt+a+Lionerrel)](https://adamkristof.hu)
+
 🌐 [Portfólió](https://adamkristof.hu) · 🦁 [Lioner](https://lioner.hu) · ✍️ [Blog](https://lioner.hu/blog/szerzo/adam-kristof) · 💼 [LinkedIn](https://www.linkedin.com/in/adamkristof/)
 
 13 évesen raktam össze az első weboldalamat. Ma üzleti rendszereket (ERP, CRM, belső eszközök) és webalkalmazásokat tervezek és fejlesztek Laravelben, főleg olyan cégeknek, akik kinőtték az Excelt. A Lionerrel eddig 130+ projektet adtunk át.
@@ -49,15 +51,21 @@ Emellett: Socket.io, Bootstrap, Nginx, DigitalOcean, CI/CD, és integrációk, p
 
 **Írásaim** (a Lioner blogján)
 
+<!-- BLOG:START -->
 - [A legtöbb cég nem emberhiánnyal küzd, hanem rendszerhiánnyal](https://lioner.hu/blog/a-legtobb-ceg-nem-emberhiannyal-kuzd-hanem-rendszerhiannyal)
 - [Mennyibe kerül valójában a manuális működés?](https://lioner.hu/blog/mennyibe-kerul-valojaban-a-manualis-mukodes)
 - [Hogyan épül fel egy vállalati rendszer a nulláról?](https://lioner.hu/blog/hogyan-epul-fel-egy-vallalati-rendszer-a-nullarol)
 - [Mikor nem éri meg egyedi fejlesztést választani?](https://lioner.hu/blog/mikor-nem-eri-meg-egyedi-fejlesztest-valasztani)
 - [Egy ügyfelünk napi 3 órát spórolt egyedi rendszerrel](https://lioner.hu/blog/egy-ugyfelunk-napi-3-orat-sporolt-egyedi-rendszerrel)
+<!-- BLOG:END -->
 
 [Mind a 39 cikkem →](https://lioner.hu/blog/szerzo/adam-kristof)
 
 **Aktivitás**
+
+<picture>
+  <img alt="Ádám Kristóf GitHub-aktivitása: terminál-kártya" src="https://raw.githubusercontent.com/adamkristoflioner/adamkristoflioner/output/kristof-terminal.svg">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=adamkristoflioner&theme=dark&hide_border=true&background=0D1117&locale=hu">
@@ -83,6 +91,11 @@ $ git log --oneline --reverse kristof
 ```
 
 A munkám nagy része privát ügyfélrepókban van, ezért sűrűbb a hozzájárulási grafikon, mint a nyilvános repók listája.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adamkristoflioner/adamkristoflioner/output/snake-dark.svg">
+  <img alt="Kígyó, ami megeszi a hozzájárulási grafikonomat" src="https://raw.githubusercontent.com/adamkristoflioner/adamkristoflioner/output/snake.svg">
+</picture>
 
 **Elérhetőség**
 
