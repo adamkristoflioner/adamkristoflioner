@@ -175,7 +175,7 @@ function calendarSvg({ total, weeks }) {
         + Object.values(LEVEL_FILL).map((f, i) => `<rect x='${legendX + i * step}' y='${H - 17}' width='${cell}' height='${cell}' rx='2' fill='${f}'/>`).join('')
         + `<text x='${legendX + 5 * step + 4}' y='${H - 8}' ${font} font-size='10' fill='#6f6a62'>több</text>`;
     return `<svg xmlns='http://www.w3.org/2000/svg' width='${W}' height='${H}' viewBox='0 0 ${W} ${H}' role='img' aria-label='Ádám Kristóf GitHub-hozzájárulásai az elmúlt egy évben: ${num(total)}'>
-<text x='0' y='14' ${font} font-size='13' fill='#121212' font-weight='600'>${num(total)} hozzájárulás az elmúlt egy évben</text>
+<text x='${W - 4}' y='14' ${font} font-size='13' fill='#121212' font-weight='600' text-anchor='end'>${num(total)} hozzájárulás az elmúlt egy évben</text>
 ${months.join('')}
 ${dayLabels}
 ${cells.join('')}
