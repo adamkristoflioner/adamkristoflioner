@@ -1,36 +1,36 @@
-### Hi, I'm Kristóf 👋
+### Szia, Kristóf vagyok 👋
 
-**Full-stack developer · co-founder @ [Lioner](https://lioner.hu) · Kecskemét, Hungary**
+**Full-stack fejlesztő · a [Lioner](https://lioner.hu) társalapítója · Kecskemét**
 
-*Most companies don't need more software. They need operations they can actually see.*
+*A legtöbb cégnek nem újabb szoftver hiányzik, hanem átlátható működés.*
 
-🌐 [Portfolio](https://adamkristof.hu) · 🦁 [Lioner](https://lioner.hu) · ✍️ [Blog](https://lioner.hu/blog/szerzo/adam-kristof) · 💼 [LinkedIn](https://www.linkedin.com/in/adamkristof/)
+🌐 [Portfólió](https://adamkristof.hu) · 🦁 [Lioner](https://lioner.hu) · ✍️ [Blog](https://lioner.hu/blog/szerzo/adam-kristof) · 💼 [LinkedIn](https://www.linkedin.com/in/adamkristof/)
 
-I built my first website at 13. Today I design and build business systems (ERP, CRM, internal tools) and web applications in Laravel, mostly for companies that have outgrown spreadsheets. 130+ projects shipped with Lioner so far.
+13 évesen raktam össze az első weboldalamat. Ma üzleti rendszereket (ERP, CRM, belső eszközök) és webalkalmazásokat tervezek és fejlesztek Laravelben, főleg olyan cégeknek, akik kinőtték az Excelt. A Lionerrel eddig 130+ projektet adtunk át.
 
-**What I'm building now**
+**Amin most dolgozom**
 
-- **Lioner ERP** – our own ERP that runs the company: CRM and sales pipeline, projects, time tracking, invoicing, and a rule-based automation engine (trigger → condition → actions)
-- **AI agents in production** – three AI coworkers inside the ERP that plan the day, process incoming email and open pull requests, connected through MCP servers. A human approves anything that goes out to a client
-- **MCP servers for client systems** – so our clients can manage their own sites and back offices from Claude
-- **Modular Laravel base** – the starter every client project begins from: admin, block-based CMS, media library, SEO
+- **Lioner ERP** – a saját ERP-nk, ezen fut az egész cég: CRM és értékesítési pipeline, projektek, időmérés, számlázás, és egy szabályalapú automatizációs motor (kiváltó → feltétel → akciók)
+- **AI-ügynökök éles használatban** – három AI-munkatárs dolgozik az ERP-ben: megtervezik a napunkat, feldolgozzák a bejövő leveleket, és pull requestet nyitnak. MCP-szervereken keresztül érik el a rendszert. Ami az ügyfélhez kimegy, azt mindig ember hagyja jóvá
+- **MCP-szerverek ügyfélrendszerekhez** – hogy az ügyfeleink a Claude-ból is kezelni tudják a saját oldalukat és háttérrendszerüket
+- **Moduláris Laravel-alap** – erről indul minden ügyfélprojektünk: admin, blokkalapú tartalomkezelő, médiatár, SEO
 
-**Selected work**
+**Kiemelt munkák**
 
-| Project | What it is | Stack | Result |
+| Projekt | Mi ez | Technológia | Eredmény |
 | --- | --- | --- | --- |
-| [VidékiOtthon](https://lioner.hu/referencia/videkiotthon-ingatlan-hirdetesi-portal-fejlesztes) | Real estate portal grown out of a large Facebook group: filters, per-listing stats, automatic Facebook posting | Laravel | 1,100+ active listings and 400+ users in the first two months |
-| [JustConnect](https://lioner.hu/referencia/justconnect) | Event platform for 100-person social evenings: tickets, QR check-in, live seating rounds, mutual-interest matching, two languages | Laravel | 9 organiser exports, own CMS |
-| [TanárTér](https://lioner.hu/referencia/tanarter) | Private tutor marketplace from zero: search, paid promotion, SimplePay payments, automatic Billingo invoicing, SEO landing pages | Laravel 12, Vue 3 | Idea to paying marketplace |
-| [Mohamanó Foundation](https://lioner.hu/referencia/mohamano-alapitvany) | Pro bono website for a children's charity: one-off and monthly donations with SimplePay, 1% tax and REpont pages, content the foundation edits itself | Laravel | Built for free, live in 2 weeks |
-| TrustPhone | Started as a webshop, grew into the company's internal system: inventory, sales and repair workflow | Laravel | 5 years of continuous development, still going |
-| [Borízlésem](https://borizlesem.hu) | Our own wine community platform that learns each user's taste and recommends wines | Laravel | Own product |
-| [CityFox](https://cityfox.hu) | City adventure game, started as CityRoom: turning cities into escape rooms | Web app | [1st place, MVM Edison 2022](https://www.baon.hu/pr/2022/06/szabaduloszobava-alakulo-varosok-a-cityroom-vegzett-az-elso-helyen) |
-| [Ez vagy az?](https://ezvagyaz.hu) | Quiz game: two names or events, guess which came first | Web app | Own product |
+| [VidékiOtthon](https://lioner.hu/referencia/videkiotthon-ingatlan-hirdetesi-portal-fejlesztes) | Ingatlanportál egy nagy vidéki Facebook-csoportból: szűrők, hirdetésenkénti statisztika, automatikus Facebook-posztolás | Laravel | 1100+ aktív hirdetés és 400+ regisztrált felhasználó az első két hónapban |
+| [JustConnect](https://lioner.hu/referencia/justconnect) | Rendezvényplatform 100 fős társasági estekhez: jegy, QR-belépés, élő ültetési körök, kölcsönös érdeklődésen alapuló párosítás, két nyelven | Laravel | 9 féle szervezői export, saját CMS |
+| [TanárTér](https://lioner.hu/referencia/tanarter) | Magántanár-kereső piactér a nulláról: kereső, fizetős kiemelés, SimplePay, automatikus Billingo-számlázás, SEO-oldalak | Laravel 12, Vue 3 | Ötlettől működő, fizetős piactérig |
+| [Mohamanó Alapítvány](https://lioner.hu/referencia/mohamano-alapitvany) | Weboldal egy gyerekeket segítő alapítványnak, támogatásként: egyszeri és havi adományozás SimplePay-jel, adó 1% és REpont aloldal, a tartalmat az alapítvány maga szerkeszti | Laravel | Díjmentesen, 2 hét alatt élesítve |
+| TrustPhone | Webshopnak indult, belső rendszer lett belőle: készlet, értékesítés és szervizfolyamat egy helyen | Laravel | 5 éve folyamatosan fejlesztjük |
+| [Borízlésem](https://borizlesem.hu) | Saját borközösségi platformunk, ami megtanulja a felhasználó ízlését, és ahhoz ajánl bort | Laravel | Saját termék |
+| [CityFox](https://cityfox.hu) | Városi kalandjáték, CityRoom néven indult: városokból szabadulószobát csinálni | Webalkalmazás | [1. hely, MVM Edison 2022](https://www.baon.hu/pr/2022/06/szabaduloszobava-alakulo-varosok-a-cityroom-vegzett-az-elso-helyen) |
+| [Ez vagy az?](https://ezvagyaz.hu) | Kvízjáték: két név vagy esemény, el kell dönteni, melyik volt előbb | Webalkalmazás | Saját termék |
 
-More case studies: [lioner.hu/referenciak](https://lioner.hu/referenciak)
+További esettanulmányok: [lioner.hu/referenciak](https://lioner.hu/referenciak)
 
-**Stack**
+**Amivel dolgozom**
 
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white)
@@ -45,49 +45,49 @@ More case studies: [lioner.hu/referenciak](https://lioner.hu/referenciak)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=claude&logoColor=white)
 
-Also: Socket.io, Bootstrap, Nginx, DigitalOcean, CI/CD, and integrations like SimplePay, Billingo and GLS.
+Emellett: Socket.io, Bootstrap, Nginx, DigitalOcean, CI/CD, és integrációk, például SimplePay, Billingo, GLS.
 
-**Writing** (in Hungarian, on the Lioner blog)
+**Írásaim** (a Lioner blogján)
 
-- [Most companies aren't short of people, they're short of systems](https://lioner.hu/blog/a-legtobb-ceg-nem-emberhiannyal-kuzd-hanem-rendszerhiannyal)
-- [What does running on manual work really cost?](https://lioner.hu/blog/mennyibe-kerul-valojaban-a-manualis-mukodes)
-- [How a company system is built from scratch](https://lioner.hu/blog/hogyan-epul-fel-egy-vallalati-rendszer-a-nullarol)
-- [When custom development is not worth it](https://lioner.hu/blog/mikor-nem-eri-meg-egyedi-fejlesztest-valasztani)
-- [A client saved 3 hours a day with a custom system](https://lioner.hu/blog/egy-ugyfelunk-napi-3-orat-sporolt-egyedi-rendszerrel)
+- [A legtöbb cég nem emberhiánnyal küzd, hanem rendszerhiánnyal](https://lioner.hu/blog/a-legtobb-ceg-nem-emberhiannyal-kuzd-hanem-rendszerhiannyal)
+- [Mennyibe kerül valójában a manuális működés?](https://lioner.hu/blog/mennyibe-kerul-valojaban-a-manualis-mukodes)
+- [Hogyan épül fel egy vállalati rendszer a nulláról?](https://lioner.hu/blog/hogyan-epul-fel-egy-vallalati-rendszer-a-nullarol)
+- [Mikor nem éri meg egyedi fejlesztést választani?](https://lioner.hu/blog/mikor-nem-eri-meg-egyedi-fejlesztest-valasztani)
+- [Egy ügyfelünk napi 3 órát spórolt egyedi rendszerrel](https://lioner.hu/blog/egy-ugyfelunk-napi-3-orat-sporolt-egyedi-rendszerrel)
 
-[All 39 articles →](https://lioner.hu/blog/szerzo/adam-kristof)
+[Mind a 39 cikkem →](https://lioner.hu/blog/szerzo/adam-kristof)
 
-**Activity**
+**Aktivitás**
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=adamkristoflioner&theme=dark&hide_border=true&background=0D1117">
-  <img alt="GitHub streak stats" src="https://streak-stats.demolab.com?user=adamkristoflioner&hide_border=true">
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=adamkristoflioner&theme=dark&hide_border=true&background=0D1117&locale=hu">
+  <img alt="GitHub aktivitás" src="https://streak-stats.demolab.com?user=adamkristoflioner&hide_border=true&locale=hu">
 </picture>
 
-**How I got here**
+**Hogyan jutottam ide**
 
 ```console
 $ git log --oneline --reverse kristof
-2013  init: first website, plain HTML and CSS, at 13
-2016  feat: Zrínyi math contest, 1st place in the county
-2017  feat: Dusza Árpád national programming contest, podium two years in a row
-2018  feat: Gábor Dénes contest, 4th place
-2016  docs: teaching programming to 7–14 year olds at Dr.Code (one school year, 2016–19)
-2019  chore: software developer program at Kandó, Kecskemét
-2021  feat: co-found Lioner with Péter Farkas
-2022  feat: 1st place at the MVM Edison startup competition with CityRoom
-2023  refactor: go full-time on Lioner
-2024  feat: video and social media for Kecskeméti TE on weekends
-2025  chore: move into our own office in Kecskemét
-2026  feat: AI coworkers in our own ERP
+2013  init: az első weboldal, sima HTML és CSS, 13 évesen
+2016  feat: Zrínyi matekverseny, megyei 1. hely
+2016  docs: programozást tanítok 7–14 éveseknek a Dr.Code-nál (egy tanévig, 2016–19)
+2017  feat: Dusza Árpád országos programozói verseny, két egymást követő évben dobogón
+2018  feat: Gábor Dénes verseny, 4. hely
+2019  chore: szoftverfejlesztő szak a Kandóban, Kecskeméten
+2021  feat: Farkas Péterrel megalapítjuk a Lionert
+2022  feat: 1. hely az MVM Edison startupversenyen a CityRoommal
+2023  refactor: főállásban viszem a céget
+2024  feat: hétvégente videó és közösségi média a Kecskeméti TE-nek
+2025  chore: beköltözünk a saját kecskeméti irodánkba
+2026  feat: AI-munkatársak a saját ERP-nkben
 ```
 
-Most of my work lives in private client repositories, which is why the contribution graph is busier than the public repo list.
+A munkám nagy része privát ügyfélrepókban van, ezért sűrűbb a hozzájárulási grafikon, mint a nyilvános repók listája.
 
-**Find me**
+**Elérhetőség**
 
 [adamkristof.hu](https://adamkristof.hu) · [lioner.hu](https://lioner.hu) · [LinkedIn](https://www.linkedin.com/in/adamkristof/) · adam.kristof@lioner.hu
 
 ---
 
-*"Inkább egy határozott nem, mintsem egy bizonytalan igen."* – a firm no beats an uncertain yes. My reply to a client in 2021, and still how we pick projects.
+*„Inkább egy határozott nem, mintsem egy bizonytalan igen.”* – ezt írtam egy megkeresésre 2021-ben, és ma is így választunk projektet.
