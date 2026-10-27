@@ -1,6 +1,7 @@
 ### Hi, I'm Kristóf 👋
 
 **Full-stack developer · co-founder @ [Lioner](https://lioner.hu) · Kecskemét, Hungary**
+
 *Most companies don't need more software. They need operations they can actually see.*
 
 🌐 [Portfolio](https://adamkristof.hu) · 🦁 [Lioner](https://lioner.hu) · ✍️ [Blog](https://lioner.hu/blog/szerzo/adam-kristof) · 💼 [LinkedIn](https://www.linkedin.com/in/adamkristof/) · 🔍 [Free business audit](https://lioner.hu/audit)
@@ -71,7 +72,7 @@ $ git log --oneline --reverse kristof
 2016  feat: Zrínyi math contest, 1st place in the county
 2017  feat: Dusza Árpád national programming contest, podium two years in a row
 2018  feat: Gábor Dénes contest, 4th place
-2016-19  docs: a school year teaching programming to 7–14 year olds at Dr.Code
+2016  docs: teaching programming to 7–14 year olds at Dr.Code (one school year, 2016–19)
 2019  chore: software developer program at Kandó, Kecskemét
 2021  feat: co-found Lioner with Péter Farkas
 2022  feat: 1st place at the MVM Edison startup competition with CityRoom
