@@ -12,9 +12,10 @@ const WEEKDAYS = ['V', 'H', 'K', 'Sze', 'Cs', 'P', 'Szo']; // GraphQL: 0 = vasá
 const WEEKDAY_NAMES = ['vasárnap', 'hétfő', 'kedd', 'szerda', 'csütörtök', 'péntek', 'szombat'];
 
 async function fetchCalendar() {
-    const query = `query($login: String!) {
+    const year = new Date().getUTCFullYear();
+    const query = `query($login: String!, $from: DateTime!, $to: DateTime!) {
         user(login: $login) {
-            contributionsCollection {
+            contributionsCollection(from: $from, to: $to) {
                 contributionCalendar {
                     totalContributions
                     weeks { contributionDays { date contributionCount weekday } }
@@ -25,19 +26,18 @@ async function fetchCalendar() {
     const res = await fetch('https://api.github.com/graphql', {
         method: 'POST',
         headers: { Authorization: `bearer ${TOKEN}`, 'Content-Type': 'application/json', 'User-Agent': USER },
-        body: JSON.stringify({ query, variables: { login: USER } }),
+        body: JSON.stringify({ query, variables: { login: USER, from: `${year}-01-01T00:00:00Z`, to: new Date().toISOString() } }),
     });
     const json = await res.json();
     if (json.errors) throw new Error(JSON.stringify(json.errors));
     const cal = json.data.user.contributionsCollection.contributionCalendar;
-    return { total: cal.totalContributions, days: cal.weeks.flatMap(w => w.contributionDays) };
+    return { year, total: cal.totalContributions, days: cal.weeks.flatMap(w => w.contributionDays) };
 }
 
-function stats({ total, days }) {
+function stats({ year, total, days }) {
     const today = new Date().toISOString().slice(0, 10);
     const month = today.slice(0, 7);
-    const from = new Date(Date.now() - 364 * 86400000).toISOString().slice(0, 10);
-    const past = days.filter(d => d.date <= today && d.date >= from);
+    const past = days.filter(d => d.date <= today && d.date >= `${year}-01-01`);
 
     const thisMonth = past.filter(d => d.date.startsWith(month)).reduce((s, d) => s + d.contributionCount, 0);
     const activeDays = past.filter(d => d.contributionCount > 0).length;
@@ -60,7 +60,7 @@ function stats({ total, days }) {
     for (const d of past) byWeekday[d.weekday] += d.contributionCount;
     const busiest = byWeekday.indexOf(Math.max(...byWeekday));
 
-    return { total, thisMonth, activeDays, dayCount: past.length, longest, current, byWeekday, busiest, today };
+    return { year, total, thisMonth, activeDays, dayCount: past.length, longest, current, byWeekday, busiest, today };
 }
 
 async function fetchPosts() {
@@ -87,7 +87,7 @@ function terminalSvg(st, latest) {
     const W = 760, H = 300;
     const mono = "font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace'";
     const rows = [
-        ['hozzájárulás (365 nap)', num(st.total)],
+        [`hozzájárulás ${st.year}-ban`, num(st.total)],
         ['ebben a hónapban', num(st.thisMonth)],
         ['aktív napok', `${st.activeDays} / ${st.dayCount}`],
         ['leghosszabb sorozat', `${st.longest} nap`],
@@ -123,9 +123,9 @@ function terminalSvg(st, latest) {
 <rect width='${W}' height='${H}' rx='12' fill='#0d1117' stroke='#30363d'/>
 <circle cx='24' cy='22' r='6' fill='#ff5f56'/><circle cx='44' cy='22' r='6' fill='#ffbd2e'/><circle cx='64' cy='22' r='6' fill='#27c93f'/>
 <text x='${W / 2}' y='27' ${mono} font-size='12' fill='#8b949e' text-anchor='middle'>kristof@lioner: ~</text>
-<text x='28' y='60' ${mono} font-size='15' fill='#7ee787'>kristof@lioner<tspan fill='#c9d1d9'>:</tspan><tspan fill='#79c0ff'>~</tspan><tspan fill='#c9d1d9'>$ ./status.sh</tspan></text>
+<text x='28' y='60' ${mono} font-size='15' fill='#7ee787'>kristof@lioner<tspan fill='#c9d1d9'>:</tspan><tspan fill='#79c0ff'>~</tspan><tspan fill='#c9d1d9'>$ ./status.sh --ev ${st.year}</tspan></text>
 ${lines}
-<text x='${chartX}' y='76' ${mono} font-size='12' fill='#8b949e'>hozzájárulás a hét napjai szerint</text>
+<text x='${chartX}' y='76' ${mono} font-size='12' fill='#8b949e'>${st.year}, a hét napjai szerint</text>
 ${bars}
 ${post}
 <text x='${W - 28}' y='${H - 12}' ${mono} font-size='11' fill='#484f58' text-anchor='end'>frissítve: ${st.today} · GitHub Actions</text>
